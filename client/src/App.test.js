@@ -1,9 +1,23 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+.form-group {
+  width: 275px;
+  margin: 0px auto;
+}
+
+.input-group {
+  width: 275px;
+  margin: 0px auto;
+}
+
+.centered {
+  text-align: center
+}
+
+.weather {
+  margin-top: 30px
+}
