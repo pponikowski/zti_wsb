@@ -74,21 +74,21 @@ class App extends Component {
     return (
       <Container fluid className="centered">
         <Navbar dark color="dark">
-          <NavbarBrand href="/">MyWeather</NavbarBrand>
+          <NavbarBrand href="/">Sprawdź pogodę - WSB</NavbarBrand>
         </Navbar>
         <Row>
           <Col>
             <Jumbotron>
-              <h1 className="display-3">MyWeather</h1>
-              <p className="lead">The current weather for your favorite cities!</p>
+              <h1 className="display-3">Moja pogoda</h1>
+              <p className="lead">Aktualna pogoda dla Twojego miasta.</p>
               <InputGroup>
                 <Input 
-                  placeholder="New city name..."
+                  placeholder="Dodaj nowe miasto (bez polskich liter)..."
                   value={this.state.newCityName}
                   onChange={this.handleInputChange}
                 />
                 <InputGroupAddon addonType="append">
-                  <Button color="primary" onClick={this.handleAddCity}>Add City</Button>
+                  <Button color="primary" onClick={this.handleAddCity}>Dodaj miasto</Button>
                 </InputGroupAddon>
                 
               </InputGroup>
@@ -97,11 +97,11 @@ class App extends Component {
         </Row>
         <Row>
           <Col>
-            <h1 className="display-5">Current Weather</h1>
+            <h1 className="display-5">Aktualna pogoda</h1>
             <FormGroup>
               <Input type="select" onChange={this.handleChangeCity}>
-                { this.state.cityList.length === 0 && <option>No cities added yet.</option> }
-                { this.state.cityList.length > 0 && <option>Select a city.</option> }
+                { this.state.cityList.length === 0 && <option>Brak dodanych miast...</option> }
+                { this.state.cityList.length > 0 && <option>Wybierz miasto...</option> }
                 { this.state.cityList.map((city, i) => <option key={i}>{city}</option>) }
               </Input>
             </FormGroup>
